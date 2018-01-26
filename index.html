@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS-Tricks</title>
+</head>
+<body>
+
+
+<section id="one">
+	<a href="#" class="cvss-badge cvss-rating-medium">
+		<span class="cvss">CVSS</span>
+		<span class="cvss-score">5.3</span>
+		<span class="cvss-rating">Medium</span>
+	</a>
+	<style>
+		/* https://nodesecurity.io/advisories/62 */
+		#one {
+			margin: 50px;
+		}
+		.cvss-rating-medium {
+		    background: #f18902;
+		}
+		.cvss-rating-medium:before, .cvss-rating-medium:after {
+		    border-bottom-color: #f18902;
+		}
+		.cvss-badge:before {
+		    content: "";
+		    position: absolute;
+		    top: -25px;
+		    left: 0;
+		    width: 0;
+		    height: 0;
+		    border-left: 50px solid transparent;
+		    border-right: 50px solid transparent;
+		    border-bottom: 25px solid #f18902;;
+		}
+		.cvss-badge:after {
+		    content: "";
+		    position: absolute;
+		    bottom: -25px;
+		    left: 0;
+		    width: 0;
+		    height: 0;
+		    border-left: 50px solid transparent;
+		    border-right: 50px solid transparent;
+		    border-top: 25px solid #f18902;;
+		    z-index: 0;
+		}
+		.cvss-badge {
+		    width: 100px;
+		    height: 55px;
+		    background: #f18902;;
+		    position: relative;
+		    display: inline-block;
+		    text-decoration: none;
+		}
+		.cvss-score, .cvss-rating, .cvss {
+		    display: block;
+		    font-size: .8em;
+		    line-height: 1.35;
+		    text-align: center;
+		    color: #fff;
+		    position: relative;
+		    top: -10px;
+		    z-index: 1;
+		}
+		.cvss-score {
+		    font-size: 2.5em;
+    		line-height: 1;
+		}
+		
+	</style>
+</section>
+
+
+	
+</body>
+</html>
